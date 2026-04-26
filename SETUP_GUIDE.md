@@ -18,8 +18,8 @@ npm install
 ### Step 2: Start Backend (Terminal 1)
 ```bash
 python api.py
-# Output: 🚀 Starting Trading AI Framework API Server
-#         📍 Server running at http://localhost:5000
+# Output: [*] Starting Trading AI Framework API Server
+#         [>] Server running at http://localhost:5000
 ```
 
 ### Step 3: Start Frontend (Terminal 2)
@@ -185,7 +185,7 @@ curl "http://localhost:5000/run-simulation?cash=10000&minimax_depth=5"
 | data | string | data/sample_prices.csv | Price data CSV path |
 | cash | number | 10000 | Starting capital ($) |
 | minimax_depth | number | 5 | Minimax search depth |
-| ao_depth | number | 5 | AO* search depth |
+| ao_star_depth | number | 5 | AO* search depth |
 
 **Response (200):**
 ```json
@@ -258,16 +258,11 @@ curl http://localhost:5000/simulation-info
 ### Customize Dashboard Colors
 Edit `frontend/src/App.css` and component CSS files:
 ```css
-/* Purple gradient primary */
-background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-
-/* Custom algorithm colors */
-#667eea (Primary Blue)
-#764ba2 (Secondary Purple)
-#f093fb (Pink)
-#f5576c (Red)
-#22c55e (Green)
-#f59e0b (Amber)
+/* Clean professional theme */
+background-color: #f4f6f8;   /* Page background */
+border-color: #3b82f6;       /* Primary blue accent */
+border-color: #10b981;       /* Best performer (emerald) */
+border-color: #64748b;       /* Neutral slate */
 ```
 
 ### Change Simulation Parameters
